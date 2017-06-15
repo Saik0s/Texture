@@ -16,6 +16,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AsyncDisplayKit/ASLog.h>
 
 /**
  * Like dispatch_apply, but you can set the thread count. 0 means 2*active CPUs.
@@ -29,8 +30,12 @@ static void ASDispatchApply(size_t iterationCount, dispatch_queue_t queue, NSUIn
   }
   dispatch_group_t group = dispatch_group_create();
   __block size_t trueI = 0;
+  __unused os_activity_id_t outerID = as_activity_get_identifier(AS_ACTIVITY_CURRENT, NULL);
+  NSCAssert(outerID != 0, @"Should have an activity.");
   for (NSUInteger t = 0; t < threadCount; t++) {
     dispatch_group_async(group, queue, ^{
+      __unused os_activity_id_t innerID = as_activity_get_identifier(AS_ACTIVITY_CURRENT, NULL);
+      NSCAssert(outerID == innerID, @"Activity should have propagated.");
       size_t i;
       while ((i = __sync_fetch_and_add(&trueI, 1)) < iterationCount) {
         work(i);
