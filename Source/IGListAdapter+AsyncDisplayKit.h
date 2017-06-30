@@ -17,7 +17,6 @@
 
 #import <AsyncDisplayKit/ASAvailability.h>
 
-#if AS_IG_LIST_KIT
 
 #import <IGListKit/IGListKit.h>
 
@@ -42,4 +41,3 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-#endif // AS_IG_LIST_KIT

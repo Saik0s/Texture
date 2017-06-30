@@ -17,7 +17,6 @@
 
 #import <AsyncDisplayKit/ASAvailability.h>
 
-#if AS_IG_LIST_KIT
 
 #import "AsyncDisplayKit+IGListKitMethods.h"
 #import <AsyncDisplayKit/ASAssert.h>
@@ -58,4 +57,3 @@
 
 @end
 
-#endif // AS_IG_LIST_KIT

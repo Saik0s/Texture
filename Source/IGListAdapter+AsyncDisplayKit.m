@@ -17,7 +17,6 @@
 
 #import <AsyncDisplayKit/ASAvailability.h>
 
-#if AS_IG_LIST_KIT
 
 #import "IGListAdapter+AsyncDisplayKit.h"
 #import "ASIGListAdapterBasedDataSource.h"
@@ -58,4 +57,3 @@
 
 @end
 
-#endif // AS_IG_LIST_KIT

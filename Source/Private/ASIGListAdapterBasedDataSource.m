@@ -17,8 +17,6 @@
 
 #import <AsyncDisplayKit/ASAvailability.h>
 
-#if AS_IG_LIST_KIT
-
 #import "ASIGListAdapterBasedDataSource.h"
 #import <AsyncDisplayKit/AsyncDisplayKit.h>
 #import <objc/runtime.h>
@@ -327,4 +325,3 @@ typedef struct {
 
 @end
 
-#endif // AS_IG_LIST_KIT

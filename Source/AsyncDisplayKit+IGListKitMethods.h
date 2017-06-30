@@ -17,7 +17,6 @@
 
 #import <AsyncDisplayKit/ASAvailability.h>
 
-#if AS_IG_LIST_KIT
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -69,4 +68,3 @@ AS_SUBCLASSING_RESTRICTED
 
 NS_ASSUME_NONNULL_END
 
-#endif

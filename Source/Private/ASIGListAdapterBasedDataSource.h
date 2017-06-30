@@ -17,7 +17,6 @@
 
 #import <AsyncDisplayKit/ASAvailability.h>
 
-#if AS_IG_LIST_KIT
 
 #import <IGListKit/IGListKit.h>
 #import <AsyncDisplayKit/ASCollectionView.h>
@@ -32,6 +31,5 @@ AS_SUBCLASSING_RESTRICTED
 
 @end
 
-#endif
 
 NS_ASSUME_NONNULL_END
